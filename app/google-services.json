@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "805855504699",
+    "firebase_url": "https://toxic-and-hazardous-gases-default-rtdb.firebaseio.com",
+    "project_id": "toxic-and-hazardous-gases",
+    "storage_bucket": "toxic-and-hazardous-gases.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805855504699:android:83764765758ad863fa2f1e",
+        "android_client_info": {
+          "package_name": "com.rehman.hazardousgasesusingiot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDokBFXQZkMl_1dC29wW-Hehlxk6ENyjN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

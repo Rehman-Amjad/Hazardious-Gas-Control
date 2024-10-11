@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/menu_vmq2"
+        android:icon="@drawable/sensor"
+        android:title="MQ-2 Sensor"/>
+
+    <item android:id="@+id/menu_vmq1"
+        android:title="MQ-137 Sensor"
+        android:icon="@drawable/sensor"/>
+
+    <item android:id="@+id/menu_vmq4"
+        android:icon="@drawable/sensor"
+        android:title="MQ-4 Sensor"/>
+
+
+    <item android:id="@+id/menu_vmq5"
+        android:icon="@drawable/sensor"
+        android:title="MQ-5 Sensor"/>
+
+    <item android:id="@+id/menu_vmq3"
+        android:icon="@drawable/sensor"
+        android:title="MQ-3 Sensor"/>
+
+
+    <item android:id="@+id/menu_vmq6"
+        android:icon="@drawable/sensor"
+        android:title="MQ-6 Sensor"/>
+
+    <item android:id="@+id/menu_fire"
+        android:title="Humidity sensor"
+        android:icon="@drawable/firesensor"
+        />
+
+    <item android:id="@+id/menu_history"
+        android:icon="@drawable/history"
+        android:title="All Sensor Information"/>
+
+    <item android:id="@+id/menuGasPump"
+        android:icon="@drawable/sensor"
+        android:title="Gas Pump Control"/>
+
+    <item android:id="@+id/menu_image"
+        android:icon="@drawable/imagesensor"
+        android:title="Current Info"/>
+
+    <item android:id="@+id/menu_logout"
+        android:title="Logout"/>
+
+</menu>
