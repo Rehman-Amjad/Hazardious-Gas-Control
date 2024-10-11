@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".GasControlActivity">
 
     <LinearLayout
@@ -19,7 +20,7 @@
             android:id="@+id/image1"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/humidity"
+            android:src="@drawable/pump_image"
             android:layout_below="@+id/top_layout"
             />
 
@@ -41,19 +42,9 @@
             android:orientation="horizontal"
             android:padding="10dp"
             android:gravity="center"
-            android:weightSum="2"
+            android:weightSum="1"
             >
 
-            <Button
-                android:id="@+id/btnOn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gas On"
-                android:background="@color/purple_500"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                />
             <Button
                 android:id="@+id/btnOff"
                 android:layout_width="match_parent"
@@ -68,7 +59,16 @@
         </LinearLayout>
 
 
-
+        <Button
+            android:id="@+id/btnOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gas On"
+            android:background="@color/purple_500"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_marginRight="5dp"
+            />
 
     </LinearLayout>
 

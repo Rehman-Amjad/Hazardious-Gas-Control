@@ -77,12 +77,11 @@ public class GasControlActivity extends AppCompatActivity {
         });
     }
 
-    void changeValue(String value){
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
-                .child("Gaspump");
+    void changeValue(String value) {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
         Map<String, Object> updates = new HashMap<>();
-        updates.put("Gaspump", value);  // Replace with your key-value pairs
+        updates.put("Gasspump", value);  // Replace with your key-value pairs
 
         reference.updateChildren(updates).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

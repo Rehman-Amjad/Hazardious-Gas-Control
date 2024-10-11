@@ -92,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
                         drayerLayout.closeDrawer(GravityCompat.START);
                         break;
 
+                    case R.id.menu_vmq6:
+                        Intent mq6Intent=new Intent(MainActivity.this, MQSixActivity.class);
+                        startActivity(mq6Intent);
+                        drayerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
                     case R.id.menu_history:
                         Intent showIntent=new Intent(MainActivity.this,HistoryActivity.class);
                         startActivity(showIntent);

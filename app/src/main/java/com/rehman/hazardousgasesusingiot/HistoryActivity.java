@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -30,8 +32,10 @@ public class HistoryActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
-    ImageView back_image;
+    Button btnDeleteAll;
 
+    ImageView back_image;
+    private DatabaseReference historyRef;
     private ChildEventListener MyChildEventListener;
 
     @Override
@@ -48,7 +52,9 @@ public class HistoryActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("SensorsInformation");
+        historyRef = FirebaseDatabase.getInstance().getReference("SensorsInformation");
 
+        btnDeleteAll = findViewById(R.id.btnDeleteAll);
         back_image = findViewById(R.id.back_image);
 
         mDatalist=new ArrayList<>();
@@ -59,6 +65,10 @@ public class HistoryActivity extends AppCompatActivity {
 
         back_image.setOnClickListener(v -> {
             onBackPressed();
+        });
+
+        btnDeleteAll.setOnClickListener(v -> {
+            deleteAllHistoryData();
         });
 
         MyChildEventListener=new ChildEventListener() {
@@ -93,5 +103,21 @@ public class HistoryActivity extends AppCompatActivity {
 
         };
         myRef.addChildEventListener(MyChildEventListener);
+    }
+
+    private void deleteAllHistoryData() {
+        // Show a confirmation toast before deletion
+        Toast.makeText(HistoryActivity.this, "Deleting all history...", Toast.LENGTH_SHORT).show();
+
+        // Delete all data under "History" in Firebase
+        historyRef.removeValue().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                mDatalist.clear();
+                mUserAdapter.notifyDataSetChanged();
+                Toast.makeText(HistoryActivity.this, "All history deleted", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(HistoryActivity.this, "Failed to delete history", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
